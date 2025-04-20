@@ -1,2 +1,16 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+:root {
+  --primary-color: #4F46E5;
+  --secondary-color: #818CF8;
+  --background-color: #F3F4F6;
+  --text-color: #1F2937;
+  
+  --font-family: "Poppins", sans-serif;
+  --border-radius: 8px;
+  --spacing-unit: 8px;
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    --background-color: #1F2937;
+    --text-color: #F3F4F6;
+  }
+}
