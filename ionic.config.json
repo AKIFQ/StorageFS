@@ -1,0 +1,7 @@
+{
+  "name": "StorageFS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
