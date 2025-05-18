@@ -1896,7 +1896,7 @@ ion-fab {
 }
 
 .logo-title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--app-text);
   margin: 0;
@@ -2065,4 +2065,35 @@ ion-fab {
   .empty-list-image ion-icon {
     font-size: 20px;
   }
+}
+
+.pwa-install-prompt {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 20px 32px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.pwa-install-prompt button {
+  margin: 0 8px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pwa-install-prompt button:last-child {
+  background: #eee;
+  color: #222;
 }

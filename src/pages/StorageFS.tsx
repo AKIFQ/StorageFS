@@ -360,6 +360,8 @@ const StorageFS: React.FC = () => {
   const [transcript, setTranscript] = useState<string>('');
   const [feedback, setFeedback] = useState<string>('');
   const recognitionRef = useRef<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
 
   const {
     modes,
@@ -605,6 +607,31 @@ const StorageFS: React.FC = () => {
       setFeedback('Listening...');
       recognitionRef.current.start();
       setIsListening(true);
+    }
+  };
+
+  useEffect(() => {
+    // Check if app is already installed
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
+    if (isStandalone) return;
+
+    const handler = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallPrompt(true);
+    };
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setShowInstallPrompt(false);
+      }
+      setDeferredPrompt(null);
     }
   };
 
@@ -1138,6 +1165,13 @@ const StorageFS: React.FC = () => {
           duration={2000}
           position="bottom"
         />
+        {showInstallPrompt && (
+          <div className="pwa-install-prompt">
+            <p>Add StorageFS to your home screen for a better experience!</p>
+            <button onClick={handleInstallClick}>Add to Home Screen</button>
+            <button onClick={() => setShowInstallPrompt(false)}>Dismiss</button>
+          </div>
+        )}
       </IonContent>
     </IonPage>
   );
