@@ -1,0 +1,53 @@
+/* Header Content */
+.header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  height: 80px;
+  /* border-bottom: 1px solid #e0e0e0; */ /* Remove border for unified look */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #4a90e2;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #4a90e2;
+  letter-spacing: 0.25px;
+}
+
+/* Make header toolbar transparent and remove border */
+ion-toolbar {
+  --background: transparent !important;
+  --border-width: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem 1.5rem;
+    height: 70px;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .logo-title {
+    font-size: 1.75rem;
+  }
+} 

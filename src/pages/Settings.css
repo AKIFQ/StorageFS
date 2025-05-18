@@ -1,0 +1,148 @@
+ion-list {
+  padding: 0;
+}
+
+.section-header {
+  color: var(--ion-color-medium);
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 24px;
+}
+
+ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 16px;
+}
+
+ion-item ion-icon {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+ion-item h2 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+}
+
+ion-item p {
+  font-size: 0.85em;
+  color: var(--ion-color-medium);
+  margin: 4px 0 0;
+}
+
+ion-toggle {
+  --background: var(--ion-color-medium);
+  --background-checked: var(--ion-color-primary);
+  --handle-background: var(--ion-color-light);
+  --handle-background-checked: var(--ion-color-light);
+}
+
+/* PIN Pad Styling */
+/* .pin-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.pin-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.pin-dots {
+  display: flex;
+  gap: 16px;
+}
+
+.pin-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--ion-color-primary);
+  transition: background-color 0.2s ease;
+}
+
+.pin-dot.filled {
+  background-color: var(--ion-color-primary);
+}
+
+.pin-instruction {
+  text-align: center;
+  color: var(--ion-color-medium);
+  margin-bottom: 24px;
+  font-size: 1.1em;
+}
+
+ion-grid {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+ion-grid ion-button {
+  width: 72px;
+  height: 72px;
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 8px;
+}
+
+ion-grid ion-button ion-icon {
+  font-size: 28px;
+} */
+
+/* Modal Styling */
+ion-modal ion-header ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}
+
+ion-modal ion-content {
+  --background: var(--ion-background-color);
+}
+
+/* About Modal Styling */
+ion-modal h2 {
+  color: var(--ion-color-primary);
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+ion-modal h3 {
+  color: var(--ion-color-dark);
+  font-size: 1.2em;
+  margin: 16px 0 8px;
+}
+
+ion-modal ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+ion-modal ul li {
+  margin: 8px 0;
+  color: var(--ion-color-medium);
+}
+
+/* Alert Styling */
+ion-alert.alert-danger {
+  --background: var(--ion-color-danger-tint);
+}
+
+/* Toast Styling */
+ion-toast {
+  --background: var(--ion-color-dark);
+  --color: var(--ion-color-light);
+}
+
+ion-toast.toast-error {
+  --background: var(--ion-color-danger);
+}
