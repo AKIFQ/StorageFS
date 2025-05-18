@@ -855,7 +855,7 @@ const StorageFS: React.FC = () => {
                         onClick={() => navigateToContainer(container.name)}
                       >
                         <IonIcon slot="start" icon={listOutline} />
-                        View Items
+                        <span>View Items</span>
                       </IonButton>
                       <IonButton
                         fill="clear"
@@ -867,7 +867,7 @@ const StorageFS: React.FC = () => {
                         }}
                       >
                         <IonIcon slot="start" icon={camera} />
-                        Take Photo
+                        <span>Take Photo</span>
                       </IonButton>
                     </div>
                   )}

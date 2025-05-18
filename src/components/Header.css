@@ -16,16 +16,17 @@
 }
 
 .logo-icon {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #4a90e2;
 }
 
 .logo-title {
-  margin: 0;
-  font-size: 2.25rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #4a90e2;
-  letter-spacing: 0.25px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px;
 }
 
 /* Make header toolbar transparent and remove border */
@@ -48,6 +49,14 @@ ion-toolbar {
   }
 
   .logo-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
+}
+
+/* Increase mic icon size in search bar */
+.voice-search-button ion-icon {
+  font-size: 1.5rem;
 } 
+.icon-inner{
+  font-size: 1.8rem;
+}
